@@ -5,6 +5,8 @@
 {% block content %}
   <div class="container py-5">
     <h1>Это главная страница проекта Yatube</h1>
-    {% include 'includes/for_loop.html' %}
+    {% for post in posts %}
+      {% include 'includes/for_loop.html' %}
+    {% endfor %}
   </div>
 {% endblock %}

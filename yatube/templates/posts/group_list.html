@@ -8,6 +8,8 @@
     <p>
       Группа тайных поклонников графа.
     </p>
-    {% include 'includes/for_loop.html' %}
+    {% for post in posts %}
+      {% include 'includes/for_loop.html' %}
+    {% endfor %}
   </div>
 {%endblock%}

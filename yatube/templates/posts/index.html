@@ -6,14 +6,7 @@
   <div class="container py-5">
     <h1>Это главная страница проекта Yatube</h1>
     {% for post in posts %}
-      <article>
-        {% include for_loop %}   
-        {% if post.group %}
-          <a href="{% url 'posts:group_list' post.group.slug %}">
-          все записи группы</a>
-        {% endif %}
-        {% if not forloop.last %}<hr>{% endif %}
-      </article>
+      {% include for_loop with all_posts='True' %}
     {% endfor %}
   </div>
 {% endblock %}

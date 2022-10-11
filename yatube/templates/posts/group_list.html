@@ -9,7 +9,10 @@
       Группа тайных поклонников графа.
     </p>
     {% for post in posts %}
-      {% include for_loop %}
+      <article>
+        {% include for_loop %}
+        {% if not forloop.last %}<hr>{% endif %}
+      </article>
     {% endfor %}
   </div>
 {%endblock%}

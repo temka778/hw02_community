@@ -7,7 +7,7 @@ COUNT_OF_POSTS = 10
 
 def index(request):
     posts = Post.objects.select_related('group')[:COUNT_OF_POSTS]
-    context = {'posts': posts}
+    context = {'posts': posts, 'for_loop': 'includes/for_loop.html'}
     return render(request, 'posts/index.html', context)
 
 
@@ -16,6 +16,7 @@ def group_posts(request, slug):
     posts = group.posts.select_related('group')[:COUNT_OF_POSTS]
     context = {
         'group': group,
-        'posts': posts
+        'posts': posts,
+        'for_loop': 'includes/for_loop.html'
     }
     return render(request, 'posts/group_list.html', context)

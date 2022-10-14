@@ -14,9 +14,11 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
-    {% block title %}
-      Тут должно быть имя вкладки.
-    {% endblock %}
+    <title>
+      {% block title %}
+        Тут должно быть имя вкладки.
+      {% endblock %}
+    </title>
   </head>
   <body>
     <header>

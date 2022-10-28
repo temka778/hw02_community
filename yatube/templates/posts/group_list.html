@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% block title %}Записи {{ group.title }}{% endblock %}
+{% block title %}Записи группы {{ group.title }}{% endblock %}
 {%block content%}
   <h1>Здесь будет информация о группах проекта Yatube</h1>
   {% for post in page_obj %}
     {% include for_loop %}
   {% endfor %}
-  {% include 'includes/paginator.html' %}
+  {% include paginator %}
 {%endblock%}
